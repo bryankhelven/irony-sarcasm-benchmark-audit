@@ -2,7 +2,7 @@
 
 | Path | Purpose | Needed for quick verification? |
 |---|---|---:|
-| `README.md` | Reviewer entry point | yes |
+| `README.md` | Public research entry point | yes |
 | `RESULTS.md` | Human-readable map of claims to results | yes |
 | `REPRODUCE.md` | Exact verification/reproduction instructions | yes |
 | `scripts/artifact_doctor.py` | Hash + anonymity/codename scan | yes |
@@ -19,5 +19,7 @@
 | `environment/` | Dependency versions and original compute environment | no |
 
 The Hxx prefixes preserve execution provenance from the frozen research pipeline. They
-are mapped to human-readable stages in `REPRODUCE.md`; reviewers do not need to know the
+are mapped to human-readable stages in `REPRODUCE.md`; readers do not need to know the
 development history to use the artifact.
+
+Additional public-release materials: `CITATION.cff` for author metadata, `docs/HUMAN_REVIEW.md` for the blind-review protocol, and `scripts/export_human_review.py` for local generation of the review form.

@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "Please cite the ERCEMAPI 2026 paper and this reproducibility artifact."
+title: "When the Label Is in the Text: Reproducibility Artifact"
+type: software
+authors:
+  - given-names: Itagiba
+    family-names: de Albuquerque Neto
+    email: itagiba.net@gmail.com
+    affiliation: "ICMC/USP; UFCG"
+  - given-names: Bryan K. S.
+    family-names: Barbosa
+    email: bryankhelven@ieee.org
+    affiliation: "ICMC/USP; NILC; Instituto Atlantico"
+repository-code: "https://github.com/bryankhelven/irxsvmqkt"
+url: "https://github.com/bryankhelven/irxsvmqkt"
+license: MIT

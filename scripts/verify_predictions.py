@@ -74,7 +74,7 @@ def main():
     print(f"External BERTweet 3-seed mean Macro-F1: {bert_mean:.6f}")
     print(f"External BERTweet sample SD:          {bert_sd:.6f}")
     print("OVERALL:", "PASS" if all(checks) else "FAIL")
-    return 0
+    return 0 if all(checks) else 1
 
 if __name__ == "__main__":
     raise SystemExit(main())

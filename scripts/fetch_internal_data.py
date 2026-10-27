@@ -45,7 +45,7 @@ def main():
         print("Install the core environment first:")
         print("  pip install -r environment/requirements-core.txt")
         print("error:", repr(exc))
-        return 0
+        return 1
 
     download_root = root / "data/raw/_kagglehub_download"
     if download_root.exists():
@@ -65,7 +65,7 @@ def main():
         print("The dataset is public and normally does not require authentication.")
         print("If Kaggle asks for consent/authentication, configure KaggleHub and rerun.")
         print("error:", repr(exc))
-        return 0
+        return 1
 
     resolved_path = Path(resolved)
     search_root = resolved_path if resolved_path.exists() else download_root
@@ -74,7 +74,7 @@ def main():
     if train_src is None or test_src is None:
         print("BLOCKER: downloaded dataset does not expose train.csv and test.csv.")
         print("resolved path:", resolved)
-        return 0
+        return 1
 
     observed_train = sha256(train_src)
     observed_test = sha256(test_src)
@@ -84,7 +84,7 @@ def main():
     if observed_train != TRAIN_SHA or observed_test != TEST_SHA:
         print("BLOCKER: Kaggle source snapshot changed or unexpected files were resolved.")
         print("The frozen experiment requires the exact hashes in manifests/SOURCES.md.")
-        return 0
+        return 1
 
     dest.mkdir(parents=True, exist_ok=True)
     shutil.copy2(train_src, train_dest)
