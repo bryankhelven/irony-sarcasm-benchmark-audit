@@ -6,7 +6,7 @@ Public research artifact accompanying the paper **accepted at ERCEMAPI 2026** (X
 
 **Authors**
 - **Itagiba de Albuquerque Neto:** ICMC, University of Sao Paulo (USP); Federal University of Campina Grande (UFCG). itagiba.net@gmail.com
-- **Bryan K. S. Barbosa:** ICMC/USP; Interinstitutional Center for Computational Linguistics (NILC); Instituto Atlantico. bryankhelven@ieee.org
+- **Bryan K. S. Barbosa:** ICMC/USP; Núcleo Interinstitucional de Linguística Computacional (NILC); Instituto Atlantico. bryankhelven@ieee.org
 
 The final proceedings DOI and published bibliographic record are pending. Software citation metadata are in [CITATION.cff](CITATION.cff).
 
