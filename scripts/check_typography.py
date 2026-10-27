@@ -67,7 +67,7 @@ def main():
     for path in sorted(root.rglob("*")):
         if not path.is_file():
             continue
-        if ".git" in path.parts:
+        if any(part in {".git", ".venv", "data", "runs", "reports", "artifacts", "models"} for part in path.relative_to(root).parts):
             continue
         failures.extend(scan_file(path))
 
@@ -79,7 +79,7 @@ def main():
         print("TYPOGRAPHY AUDIT: PASS")
         print("No Unicode dash punctuation remains.")
         print("No inline prose dash run longer than '--' remains.")
-    return 0
+    return 0 if not failures else 1
 
 if __name__ == "__main__":
     raise SystemExit(main())

@@ -1,6 +1,6 @@
 # Reproduction guide
 
-The artifact supports three distinct levels of verification. Reviewers do not need to
+The artifact supports three distinct levels of verification. Readers do not need to
 retrain BERTweet to check the reported numbers.
 
 ## Level 0 -- integrity + headline metric verification
@@ -121,3 +121,7 @@ See:
 - `RESULTS.md`
 - `manifests/EXPECTED_RESULTS.json`
 - `results/summaries/`
+
+## Independent human review (private, blinded)
+
+After generating the H08 queue locally with `bash scripts/run.sh stats`, run `python scripts/export_human_review.py`. The resulting `reports/human_review/HUMAN_REVIEW_BLIND.tsv` contains no dataset gold labels or model predictions; its text-bearing contents must remain private. See `docs/HUMAN_REVIEW.md`.
